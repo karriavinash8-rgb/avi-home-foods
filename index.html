@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Home Foods</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>Home Foods</h1>
+
+<div class="nav">
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('menu')">Menu</button>
+    <button onclick="showPage('signup')">Sign Up</button>
+    <button onclick="showPage('login')">Log In</button>
+    <button onclick="showPage('cart')">Cart 🛒</button>
+</div>
+</header>
+<div id="home" class="page" style="display:block;">
+    <div class="items">
+        <div class="food" id="food1"></div>
+        <div class="food" id="food2"></div>
+        <div class="food" id="food3"></div>
+        <div class="food" id="food4"></div>
+    </div>
+
+    <h2 id="hero">Welcome to Home Foods</h2>
+    <div class="cont">
+    <p class="content">
+        Abbott Home represents premium quality and refined living.  
+        Delicious homemade food crafted with love.
+          Home food is considered the healthiest and safest option because.
+           it is prepared with fresh, high-quality ingredients and cooked in a clean and hygienic environment. Unlike outside or fast food, home-cooked meals use less oil, balanced spices, and natural ingredients, which helps maintain good health.
+           Home food provides essential nutrients such as vitamins, proteins, and minerals that are necessary for the bodies growth and energy.
+           It is not only healthy but also very tasty, as it is cooked with care, love, and personal attention. The flavors of home food are comforting and satisfying, reminding us of tradition and family values. 
+          Regularly eating home food improves digestion, boosts immunity, and reduces the risk of health problems.
+           Overall, home food offers the perfect balance of quality, nutrition, taste, and wellness, making it the best choice for a healthy lifestyle.Home-cooked food has always been considered the healthiest and most reliable choice for maintaining a balanced lifestyle. 
+          Unlike commercially prepared or fast food, home food is made using fresh, high-quality ingredients that are carefully selected for their nutritional value and flavor. 
+          Cooking at home allows control over the quantity of oil, spices, and salt, which ensures that the food is not only delicious but also safe and beneficial for health.
+           Every dish prepared at home is cooked with care and attention, often infused with love and personal touch, which enhances the overall taste and satisfaction of the meal. Home meals usually incorporate a variety of vegetables, grains, proteins, and natural spices that provide essential nutrients such as vitamins, minerals, 
+          antioxidants, and proteins, all of which are vital for growth, energy, and overall well-being. Eating home-cooked food regularly can improve digestion, strengthen the immune system, and reduce the risk of lifestyle-related diseases that are often caused by processed or fast food. Moreover, home food carries a sense of tradition, culture, and family bonding, making mealtime a comforting and enjoyable experience.
+           It not only satisfies hunger but also provides emotional comfort, a feeling that is rarely achieved with outside food. 
+          In todays fast-paced world, where convenience foods are easily available, home-cooked meals remain the gold standard for quality, nutrition, and taste. They represent a perfect balance between health and indulgence, offering meals that are wholesome, flavorful, and visually appealing. From the aroma that fills the kitchen to the vibrant colors on the plate, every aspect of home food is designed to nourish both the body and the soul. 
+          By prioritizing home-cooked meals, individuals and families can maintain a healthy lifestyle, enjoy a variety of tastes, and preserve the invaluable tradition of cooking with care, ensuring that every meal is a celebration of quality, nutrition, and love.
+    </p>
+    </div>
+</div>
+<div id="menu" class="page" >
+    <h2 style="text-align:center;" id="hero">Our Menu</h2>
+
+    <input type="text" id="searchBox" placeholder="Search food..."
+           onkeyup="searchFood()"
+           style="padding:10px;width:250px;display:block;margin:20px auto;">
+
+    <div class="menu-container">
+
+        <div class="menu-card" data-name="pizza">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-nNiTVa29HQqfj_cQARHb7QhNrd5kaAF8mw&s">
+            <h3>Pizza</h3>
+            <p>₹199</p>
+            <button onclick="addToCart('Pizza',199)">Order Now</button>
+        </div>
+
+        <div class="menu-card" data-name="biryani">
+            <img src="https://b.zmtcdn.com/data/dish_photos/b93/5c706a7b4cefa13dfc5e251e26528b93.jpg">
+            <h3>Biryani</h3>
+            <p>₹299</p>
+            <button onclick="addToCart('Biryani',299)">Order Now</button>
+        </div>
+
+        <div class="menu-card" data-name="burger">
+            <img src="https://cdn.uengage.io/uploads/6670/image-415183-1700292901.jpeg">
+            <h3>Burger</h3>
+            <p>₹149</p>
+            <button onclick="addToCart('Burger',149)">Order Now</button>
+        </div>
+
+       <div class="menu-card" data-name="tandoor">
+            <img src="./Image-1_Tandoori-chicken-2-1024x538.png">
+            <h3>Tandoor Chicken</h3>
+            <p>₹349</p>
+            <button onclick="addToCart('Tandoor Chicken',349)">Order Now</button>
+        </div>
+        <div class="menu-card" data-name="fried chicken">
+            <img src="./20250701141944-fried-20chicken.webp">
+            <h3>Fried Chicken</h3>
+            <p>₹299</p>
+            <button onclick="addToCart('Fried Chicken',299)">Order Now</button>
+        </div>
+        <div class="menu-card" data-name="burger combo">
+            <img src="./image-782976-1722495876.jpeg">
+            <h3>Burger Combo</h3>
+            <p>₹199</p>
+            <button onclick="addToCart('Burger Combo',199)">Order Now</button>
+        </div>
+        <div class="menu-card" data-name="chicken lollipop">
+            <img src="https://www.greenchickchop.in/cdn/shop/files/ChickenLollipop_1__result.webp?v=1682587206">
+            <h3>Chicken Lollipops</h3>
+            <p>₹269</p>
+            <button onclick="addToCart('Chicken Lollipops',269)">Order Now</button>
+        </div>
+        <div class="menu-card" data-name="chicken manchuria">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjVeML8GtstWZd1ZLJ49WLtBnq0I2HlGI_RA&s">
+            <h3>Chicken Manchuria</h3>
+            <p>₹279</p>
+            <button onclick="addToCart('Chicken Manchuria',279)">Order Now</button>
+        </div>
+        <div class="menu-card" data-name="chicken nuggets">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_6LgAjSjzKqZ04X2U-kuaFaK5YHoVNvJPHQ&s">
+            <h3>Chicken Nuggets</h3>
+            <p>₹199</p>
+            <button onclick="addToCart('Chicken Nuggets',199)">Order Now</button>
+        </div> 
+    </div>
+</div>
+<div id="signup" class="page">
+    <div class="form-box">
+        <h2>Sign Up</h2>
+        <input type="text" placeholder="Full Name">  <br>
+        <input type="email" placeholder="Email"> <br >
+        <input type="password" placeholder="Password">  <br>
+        <button>Register</button>
+    </div>
+</div>
+<div id="login" class="page">
+    <div class="form-box">
+        <h2>Log In</h2>
+        <input type="email" placeholder="Email">  
+        <input type="password" placeholder="Password">  
+        <button>Log In</button>
+    </div>
+</div>
+
+
+<div id="menu" class="page">
+    <h2>Our Menu</h2>
+    <ul id="cartItems"></ul>
+<p id="cartTotal"></p>
+    </div>
+</div>
+
+<div id="cart" class="page">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <p id="cartTotal"></p>
+</div>
+
+<div id="menu" class="page">
+    <h2 style="text-align:center;">Menu</h2>
+
+<input type="text" id="searchBox" placeholder="Search food..."
+       onkeyup="searchFood()"
+       style="padding:10px;width:250px;display:block;margin:20px auto;">
+
+
+<h3 style="text-align:center;">🛒 Cart</h3>
+<ul id="cart"></ul>
+<p id="total"></p>
+   </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
